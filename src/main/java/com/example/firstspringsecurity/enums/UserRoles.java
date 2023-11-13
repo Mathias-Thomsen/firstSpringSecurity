@@ -1,4 +1,6 @@
 package com.example.firstspringsecurity.enums;
 
-public enum Roles {
+public enum UserRoles {
+    ROLE_ADMIN,
+    ROLE_USER
 }
