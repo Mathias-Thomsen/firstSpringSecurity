@@ -1,5 +1,6 @@
 package com.example.firstspringsecurity.controller;
 
+import com.example.firstspringsecurity.dto.RegisterDto;
 import com.example.firstspringsecurity.entity.User;
 import com.example.firstspringsecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,9 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
-        System.out.println(user.toString());
-        return userService.registerUser(user);
+    public ResponseEntity<String> registerUser(@RequestBody RegisterDto registerDto) {
+        System.out.println(registerDto.toString());
+        return userService.registerUser(registerDto);
     }
 
 }
